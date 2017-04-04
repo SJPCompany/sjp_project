@@ -8,6 +8,7 @@
  * This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
  *
  */
+require APP . 'model/AccountModel.php';
 class Home extends Controller
 {
     /**
@@ -20,6 +21,16 @@ class Home extends Controller
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/index.php';
         require APP . 'view/_templates/footer.php';
+
+
+        if (isset($_POST['submit'])) {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $role = $_POST['role'];
+            $email = $_POST['email'];
+            $this->model->Checker($username, $password, $role, $email);
+            var_dump($_POST);
+        }
     }
 
     /**
