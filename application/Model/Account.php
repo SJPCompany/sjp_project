@@ -8,14 +8,13 @@
 
 namespace Mini\Model;
 
-use Mini\Controller\HomeController;
 use Mini\Core\Model;
 
 class Account extends Model
 {
-    public function getUser($username, $password, $role, $email)
+    public function getUsers($username, $password, $role, $email)
     {
-        $sql = "SELECT * FROM account WHERE username = :username LIMIT 1";
+        $sql = "SELECT * FROM account WHERE username = :username";
         $query = $this->db->prepare($sql);
         $parameters = array(':username' => $username);
 
@@ -67,7 +66,7 @@ class Account extends Model
          * $page->StartPage();
          */
         //  header("Location:" . URL . "home/start");
-        header("Location:" . APP . "home/startpage");
+        header('location: ' . URL . 'home/startpage');
         return $role;
     }
 }
