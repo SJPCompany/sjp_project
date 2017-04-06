@@ -1,7 +1,6 @@
 
     <div class="footer">
-        Find <a href="https://github.com/panique/mini3">MINI3 on GitHub</a>.
-        If you like the project, support it by <a href="http://tracking.rackspace.com/SH1ES">using Rackspace</a> as your hoster [affiliate link].
+        <p>Copyright &copy; 2017 SJP company</p>
     </div>
 
     <!-- jQuery, loaded in the recommended protocol-less way -->
