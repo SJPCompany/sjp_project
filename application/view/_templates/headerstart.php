@@ -14,5 +14,3 @@
     <link href="<?php echo URL; ?>css/style.css" rel="stylesheet">
 </head>
 <body>
-<!-- logo, check the CSS file for more info how the logo "image" is shown -->
-<div class="logo"></div>
