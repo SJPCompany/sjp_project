@@ -42,7 +42,7 @@ class HomeController
         } else {
             die("POST is not working sorry");
         }
-        /* This wont work forever reason why
+        /* This wont work on the way we send it to the model
         if (isset($submit)) {
             print_r($_POST);
             $username = $_POST['username'];
