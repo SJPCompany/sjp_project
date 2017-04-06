@@ -19,7 +19,7 @@
 
     <!-- navigation -->
     <ul class="menu">
-        <li class="link"><a class="alink" href="<?php echo URL; ?>home/startpage.php">home</a></li>
+        <li class="link"><a class="alink" href="<?php echo URL; ?>home/startpage">home</a></li>
         <li class="link"  id='dropbtn'><a class="alink" href="#">About</a>
             <div class="dropdown">
                 <a class="alink" href="#">Myself</a>
