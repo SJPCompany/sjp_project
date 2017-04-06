@@ -8,6 +8,7 @@
 
 namespace Mini\Model;
 
+use Mini\Controller\HomeController;
 use Mini\Core\Model;
 
 class Account extends Model
@@ -30,6 +31,7 @@ class Account extends Model
             $user = new Account();
             $user->registerUser($username, $password, $role, $email);
         } elseif ($count == 1) {
+            $this->checkRole();
         } else {
             echo "You already exists";
         }
@@ -47,4 +49,26 @@ class Account extends Model
         // echo '[ PDO DEBUG ]: ' . Helper::debugPDO($sql, $parameters);  exit();
         $query->execute($parameters);
     }
+
+    public function checkRole() {
+        $sql = "SELECT * FROM account";
+        $query = $this->db->prepare($sql);
+
+        $query->execute();
+        $role = $query->fetch()->role;
+
+        if (isset($role)) {
+            if($role == 'Admin') {
+                $_SESSION['admin'] = true;
+            }
+        }
+        /*
+         * $page = new HomeController();
+         * $page->StartPage();
+         */
+        //  header("Location:" . URL . "home/start");
+        header("Location:" . APP . "home/startpage");
+        return $role;
+    }
 }
+

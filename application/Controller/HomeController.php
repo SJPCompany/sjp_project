@@ -26,7 +26,25 @@ class HomeController
         require APP . 'view/home/index.php';
         require APP . 'view/_templates/footer.php';
 
-        if (isset($_POST['submit'])) {
+    }
+
+    public function doLogin() {
+        echo "I got here";
+        //die("HomeController.doLogin()");
+        // if whe have post data add song
+        var_dump($_POST);
+        if(isset($_POST)) {
+            if(isset($_POST['submit'])) {
+                echo "I WORK FINALY";
+            } else {
+                die("Submit is not working sorry");
+            }
+        } else {
+            die("POST is not working sorry");
+        }
+        /* This wont work forever reason why
+        if (isset($submit)) {
+            print_r($_POST);
             $username = $_POST['username'];
             $password = $_POST['password'];
             $role = $_POST['role'];
@@ -34,6 +52,14 @@ class HomeController
             $user = new Account();
             $user->getUser($username, $password, $role, $email);
         }
+            if (isset($_POST["submit"])) {
+            // Instance new Model (Account)
+            $user = new Account();
+            // do getUser() in model/Account.php
+            $user->getUser($_POST['username'], $_POST['password'], $_POST['role'], $_POST['email']);
+        }
+
+        */
     }
 
     /**
@@ -41,11 +67,11 @@ class HomeController
      * This method handles what happens when you move to http://yourproject/home/exampleone
      * The camelCase writing is just for better readability. The method name is case-insensitive.
      */
-    public function exampleOne()
+    public function StartPage()
     {
         // load views
         require APP . 'view/_templates/header.php';
-        require APP . 'view/home/example_one.php';
+        require APP . 'view/home/startpage.php';
         require APP . 'view/_templates/footer.php';
     }
 

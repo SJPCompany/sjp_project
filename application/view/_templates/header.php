@@ -18,9 +18,20 @@
     <div class="logo"></div>
 
     <!-- navigation -->
-    <div class="navigation">
-        <a href="<?php echo URL; ?>">home</a>
-        <a href="<?php echo URL; ?>home/exampleone">home/exampleone</a>
-        <a href="<?php echo URL; ?>home/exampletwo">home/exampletwo</a>
-        <a href="<?php echo URL; ?>songs">songs</a>
-    </div>
+    <ul class="menu">
+        <li class="link"><a class="alink" href="<?php echo URL; ?>home/startpage.php">home</a></li>
+        <li class="link"  id='dropbtn'><a class="alink" href="#">About</a>
+            <div class="dropdown">
+                <a class="alink" href="#">Myself</a>
+                <a class='alink' href="#">School</a>
+                <a class='alink' href="#">Work</a>
+        </li>
+        <li class="link"><a class="alink" href="#">CV</a></li>
+        <li class="link"><a class="alink" href="#">Contact</a></li>
+        <li class="link"  id='dropbtn'><a class="alink" href="#">SchoolProjects</a>
+            <div class="dropdown">
+                <a class="alink" href="#">Foodbank</a>
+                <a class='alink' href="#">Projects</a>
+                <a class='alink' href="#">lesson</a>
+        </li>
+    </ul>
