@@ -5,7 +5,7 @@
     <h1>Welcome to the SJP company</h1>
     <p> Please use the form below to register or log in on the site:</p>
     <br>
-    <form method="POST" action="/project/home/doLogin">
+    <form method="POST" action="../project/home/doLogin">
         <label> username: </label> <br>
         <input type="text" name="username"> <br> <br>
         <label> password: </label> <br>
