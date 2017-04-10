@@ -1,2 +1,2 @@
-# sjp_project
-school project
+# OwnWebsite
+The website for our compnay 
