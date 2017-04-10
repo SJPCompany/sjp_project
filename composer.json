@@ -1,25 +1,27 @@
 {
-    "name": "panique/mini3",
-    "description": "MINI3 - an extremely simple naked PHP application",
-    "type": "project",
+    "name": "cakedc/oven",
+    "description": "CakePHP install script",
+    "keywords": [
+        "cakephp",
+        "installer"
+    ],
+    "homepage": "https://github.com/CakeDC/oven",
     "license": "MIT",
     "authors": [
         {
-            "name": "Panique",
-            "email": "panique@firemail.de"
+            "name": "CakeDC",
+            "homepage": "https://www.cakedc.com",
+            "role": "Author"
         },
         {
-            "name": "John Dias",
-            "email": "joaodias@noctus.org"
+            "name": "Others",
+            "homepage": "https://github.com/CakeDC/oven/graphs/contributors"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {},
-    "autoload":
-    {
-        "psr-4":
-        {
-            "Mini\\" : "application/"
-        }
+    "support": {
+        "issues": "https://github.com/CakeDC/oven/issues",
+        "source": "https://github.com/CakeDC/oven"
+    },
+    "require": {
     }
 }
